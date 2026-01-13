@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Color Identifier</string>
+    
+    <!-- Navigation -->
+    <string name="nav_camera">Kamera</string>
+    <string name="nav_gallery">Galeria</string>
+    <string name="nav_picker">Paleta RGB</string>
+    <string name="nav_slots">Sloty</string>
+    <string name="nav_saved">Zapisane</string>
+    
+    <!-- Camera -->
+    <string name="camera_permission_required">Wymagane uprawnienie do kamery</string>
+    <string name="camera_permission_denied">Brak uprawnień do kamery</string>
+    <string name="touch_to_detect_color">Dotknij ekranu aby wykryć kolor</string>
+    
+    <!-- Gallery -->
+    <string name="select_image">Wybierz obraz</string>
+    <string name="gallery_permission_required">Wymagane uprawnienie do galerii</string>
+    <string name="gallery_permission_denied">Brak uprawnień do galerii</string>
+    <string name="no_image_selected">Nie wybrano obrazu</string>
+    
+    <!-- Color Info -->
+    <string name="color_name">Nazwa:</string>
+    <string name="color_hex">HEX:</string>
+    <string name="color_rgb">RGB:</string>
+    
+    <!-- Actions -->
+    <string name="save_color">Zapisz kolor</string>
+    <string name="color_saved">Kolor zapisany</string>
+    <string name="delete_color">Usuń kolor</string>
+    <string name="color_deleted">Kolor usunięty</string>
+    <string name="delete_all">Usuń wszystkie</string>
+    <string name="all_colors_deleted">Wszystkie kolory usunięte</string>
+    <string name="confirm_delete_all">Czy na pewno chcesz usunąć wszystkie kolory?</string>
+    <string name="yes">Tak</string>
+    <string name="no">Nie</string>
+    <string name="cancel">Anuluj</string>
+    
+    <!-- Share -->
+    <string name="copy_hex">Kopiuj HEX</string>
+    <string name="copy_rgb">Kopiuj RGB</string>
+    <string name="share_color">Udostępnij kolor</string>
+    <string name="share_palette">Udostępnij paletę</string>
+    <string name="hex_copied">HEX skopiowany</string>
+    <string name="rgb_copied">RGB skopiowany</string>
+    
+    <!-- Palette -->
+    <string name="create_palette">Utwórz paletę</string>
+    <string name="palette_name">Nazwa palety</string>
+    <string name="enter_palette_name">Wprowadź nazwę palety</string>
+    <string name="palette_created">Paleta utworzona</string>
+    <string name="select_colors_for_palette">Zaznacz kolory do palety</string>
+    <string name="no_colors_selected">Nie zaznaczono kolorów</string>
+    <string name="palette_deleted">Paleta usunięta</string>
+    <string name="view_palettes">Pokaż palety</string>
+    <string name="no_palettes">Brak palet</string>
+    <string name="confirm_delete_palette">Czy na pewno chcesz usunąć tę paletę?</string>
+    
+    <!-- Color Slots -->
+    <string name="color_slot">Slot %1$d</string>
+    <string name="select_color">Wybierz kolor</string>
+    <string name="empty_slot">Pusty slot</string>
+    
+    <!-- Saved Colors -->
+    <string name="no_saved_colors">Brak zapisanych kolorów</string>
+    <string name="swipe_to_delete">Przesuń aby usunąć</string>
+    <string name="selection_mode">Tryb wyboru</string>
+    <string name="selected_count">Wybrano: %1$d</string>
+    
+    <!-- Color Picker -->
+    <string name="brightness">Jasność</string>
+    <string name="alpha">Przezroczystość</string>
+    <string name="selected_color">Wybrany kolor</string>
+    
+    <!-- Errors -->
+    <string name="error_loading_image">Błąd wczytywania obrazu</string>
+    <string name="error_camera">Błąd kamery</string>
+    <string name="error_saving_color">Błąd zapisu koloru</string>
+</resources>
