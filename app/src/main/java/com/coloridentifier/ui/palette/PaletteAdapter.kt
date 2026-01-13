@@ -4,8 +4,6 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -14,7 +12,6 @@ import com.coloridentifier.data.model.SavedColor
 import com.coloridentifier.databinding.ItemPaletteBinding
 import com.coloridentifier.util.ColorUtils
 import com.coloridentifier.viewmodel.ColorViewModel
-import kotlinx.coroutines.launch
 
 /**
  * Adapter dla RecyclerView wyświetlający palety kolorów.
@@ -44,6 +41,8 @@ class PaletteAdapter(
         private val binding: ItemPaletteBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         
+        private var cachedColors: List<SavedColor> = emptyList()
+        
         /**
          * Binduje dane palety do widoku.
          *
@@ -54,18 +53,14 @@ class PaletteAdapter(
             binding.colorCount.text = "${palette.colorIds.size} kolorów"
             
             // Pobranie kolorów i wyświetlenie podglądu
-            if (binding.root.context is LifecycleOwner) {
-                val lifecycleOwner = binding.root.context as LifecycleOwner
-                lifecycleOwner.lifecycleScope.launch {
-                    colorViewModel.getColorsByIds(palette.colorIds) { colors ->
-                        displayColorsPreview(colors)
-                        
-                        // Obsługa przycisków
-                        binding.shareButton.setOnClickListener {
-                            onShareClick(palette, colors)
-                        }
-                    }
-                }
+            colorViewModel.getColorsByIds(palette.colorIds) { colors ->
+                cachedColors = colors
+                displayColorsPreview(colors)
+            }
+            
+            // Obsługa przycisków
+            binding.shareButton.setOnClickListener {
+                onShareClick(palette, cachedColors)
             }
             
             binding.deleteButton.setOnClickListener {

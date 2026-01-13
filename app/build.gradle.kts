@@ -1,17 +1,17 @@
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    id("kotlin-android")
     id("com.google.devtools.ksp")
 }
 
 android {
     namespace = "com.coloridentifier"
-    compileSdk = 34
+    compileSdk = 33
 
     defaultConfig {
         applicationId = "com.coloridentifier"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
