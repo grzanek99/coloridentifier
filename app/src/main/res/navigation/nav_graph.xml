@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/cameraFragment">
+
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.coloridentifier.ui.camera.CameraFragment"
+        android:label="@string/nav_camera" />
+
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.coloridentifier.ui.gallery.GalleryFragment"
+        android:label="@string/nav_gallery" />
+
+    <fragment
+        android:id="@+id/colorPickerFragment"
+        android:name="com.coloridentifier.ui.picker.ColorPickerFragment"
+        android:label="@string/nav_picker" />
+
+    <fragment
+        android:id="@+id/colorSlotsFragment"
+        android:name="com.coloridentifier.ui.slots.ColorSlotsFragment"
+        android:label="@string/nav_slots" />
+
+    <fragment
+        android:id="@+id/savedColorsFragment"
+        android:name="com.coloridentifier.ui.saved.SavedColorsFragment"
+        android:label="@string/nav_saved" />
+
+</navigation>
